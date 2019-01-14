@@ -5,6 +5,6 @@ const Field = ({ id, type }) => {
 		<input className="br4"
 			id={id}
 			type={type}
-		>
+		/>
 	)
 }

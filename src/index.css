@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bg{
+  background: url(src/img/ArvoreO.png) no-repeat;
+  size: cover
+}
+div{
+  padding-top: 2cm
+}
+
+form{
+  text-align: center
+}
+
+form{
+  border: 1px solid;
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding-bottom: 0.5cm
+}
+
+input{
+  margin: 1em
+}

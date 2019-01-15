@@ -22,10 +22,6 @@ div{
 }
 
 form{
-  text-align: center
-}
-
-form{
   border: 1px solid;
   width: 300px;
   margin: 0 auto;
@@ -35,4 +31,29 @@ form{
 
 input{
   margin: 1em
+}
+
+.alignLeft{
+  text-align: left
+}
+
+.alignCenter{
+  text-align: center
+}
+
+.alignRight{
+  text-align: right
+}
+
+.marginInput{
+  padding: 0.12cm;
+  width: 6cm
+}
+
+.marginLabel{
+  margin: 0.25cm
+}
+
+.marginLeft{
+  margin-left: 1.2cm
 }

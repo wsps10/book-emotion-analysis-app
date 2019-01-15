@@ -22,7 +22,7 @@ const LoginPage = () => {
             	<br/>
             	<input type="submit" value="Login" name="login"/>
             	<br/>
-            	<a href="">Cadastre-se aqui!</a>
+            	<a href="RegisterPage.js">Cadastre-se aqui!</a>
         	<form/>
         	<div/>
     	<div/>
@@ -30,4 +30,4 @@ const LoginPage = () => {
 	);
 }
 
-export default LoginPage;
+export default RegisterPage;

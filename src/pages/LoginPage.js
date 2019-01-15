@@ -54,6 +54,18 @@ class LoginPage extends React.Component {
                             }
                         }
                     >"Login"</button>
+                    <RoundIcon
+                        family = "fab"
+                        name = "facebook-f"
+                    />
+                     <RoundIcon
+                        family = "fab"
+                        name = "goodreads-g"
+                    />
+                     <RoundIcon
+                        family = "fab"
+                        name = "twitter"
+                    />
                 </form>
             </main>
         );

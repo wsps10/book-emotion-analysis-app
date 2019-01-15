@@ -21,7 +21,7 @@ class Field extends React.Component {
 		const { value } = state;
 
 		return (
-			<article>
+			<section>
 				<label htmlFor={id}>{label}</label><br/>
 				<input className="br4"
 					id = {id}
@@ -29,7 +29,7 @@ class Field extends React.Component {
 					onChange = {onChangeHandler(onChange)}
 					value = {value}
 				/>
-			</article>
+			</section>
 		);
 	}
 }

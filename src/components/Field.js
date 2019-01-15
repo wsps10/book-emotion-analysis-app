@@ -2,12 +2,10 @@ import React from 'react';
 
 class Field extends React.Component {
 	onChangeHandler = (fn = e => e.target.value) => e => {
-		const { render, setState } = this;
 		const val = fn(e);
 		const value = val === undefined ? e.target.value : val;
 		
 		this.setState({ value });
-		this.render();
 	};
 
 	constructor(props) {
@@ -19,7 +17,7 @@ class Field extends React.Component {
 
 	render() {
 		const { onChangeHandler, props, state } = this;
-		const { type, label, id, onChange } = props;
+		const { id, label, onChange, type } = props;
 		const { value } = state;
 
 		return (

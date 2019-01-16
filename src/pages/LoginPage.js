@@ -27,7 +27,7 @@ class LoginPage extends React.Component {
                     <Field 
                         value = { email }
                         type = "email"
-                        label = "email: "
+                        label = "Email: "
                         id = "email"
                         onChange = { e => {
                             const { value } = e.target;
@@ -41,7 +41,7 @@ class LoginPage extends React.Component {
                     <Field
                         value = { password }
                         type = "password"
-                        label = "password: "
+                        label = "Password: "
                         id = "password"
                         onChange = { e => handleStateChange("password", e.target.value) }
                     />
@@ -53,7 +53,7 @@ class LoginPage extends React.Component {
                                 .then(data => console.log(data));
                             }
                         }
-                    >"Login"</button>
+                    >Login</button>
                     <RoundIcon
                         family = "fab"
                         name = "facebook-f"

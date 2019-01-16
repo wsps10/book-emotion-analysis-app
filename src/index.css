@@ -14,7 +14,7 @@ code {
 }
 
 .bg{
-  background: url("img/ArvoreO.png") no-repeat;
+  background-image: url("img/ArvoreO.png") no-repeat;
   size: cover
 }
 div{

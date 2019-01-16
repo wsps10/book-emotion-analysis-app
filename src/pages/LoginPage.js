@@ -22,7 +22,7 @@ class LoginPage extends React.Component {
         const { email, password } = state;
         return (
             <main>
-                <form>
+                <form className="tc">
                     <h1>Kanoon</h1>
                     <Field 
                         value = { email }

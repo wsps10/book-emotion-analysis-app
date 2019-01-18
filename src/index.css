@@ -14,11 +14,18 @@ code {
 }
 
 .bg{
-  background-image: url("img/ArvoreO.png") no-repeat;
+  height: 88vh;
+  width: 99vw;
+  background: url("img/ArvoreO.png") no-repeat;
   size: cover
 }
 div{
   padding-top: 2cm
+}
+
+#div1{
+  padding-top: 0.5cm;
+  text-align: center
 }
 
 form{

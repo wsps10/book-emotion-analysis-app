@@ -54,6 +54,7 @@ class LoginPage extends React.Component {
                             }
                         }
                     >Login</button>
+                    <div id="div1">
                     <RoundIcon
                         family = "fab"
                         name = "facebook-f"
@@ -66,6 +67,7 @@ class LoginPage extends React.Component {
                         family = "fab"
                         name = "twitter"
                     />
+                    </div>
                 </form>
             </main>
         );

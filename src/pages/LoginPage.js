@@ -21,7 +21,7 @@ class LoginPage extends React.Component {
         const { handleStateChange, state } = this;
         const { email, password } = state;
         return (
-            <main className="bg">
+            <main className="bg size">
                 <form className="tc">
                     <h1>Kanoon</h1>
                     <Field 
@@ -54,12 +54,14 @@ class LoginPage extends React.Component {
                             }
                         }
                     >Login</button>
-                    <div id="div1">
+                    <section className="paddingTop">
                     <RoundIcon
+                        className="flex-row"
                         family = "fab"
                         name = "facebook-f"
                     />
                      <RoundIcon
+                     className="flex-row"
                         family = "fab"
                         name = "goodreads-g"
                     />
@@ -67,7 +69,7 @@ class LoginPage extends React.Component {
                         family = "fab"
                         name = "twitter"
                     />
-                    </div>
+                    </section>
                 </form>
             </main>
         );

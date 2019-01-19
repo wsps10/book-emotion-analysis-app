@@ -8,14 +8,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.size{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*Comentei esse trecho porque ainda to testando como alinhar os botões das redes sociais*/
+/*.flex-container {
+  flex-direction: row;
+}*/
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .bg{
-  height: 88vh;
-  width: 99vw;
   background: url("img/ArvoreO.png") no-repeat;
   size: cover
 }
@@ -23,9 +31,8 @@ div{
   padding-top: 2cm
 }
 
-#div1{
+.paddingTop{
   padding-top: 0.5cm;
-  text-align: center
 }
 
 form{

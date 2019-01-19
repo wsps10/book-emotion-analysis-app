@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const RoundIcon = ({ bgColor="blue", color="white", family, name }) => {
 	return (
-		<section>
+		<section className="boxmodel">
 		  <FontAwesomeIcon icon={[family, name]}/>
 		</section>
 	);

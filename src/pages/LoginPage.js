@@ -56,12 +56,10 @@ class LoginPage extends React.Component {
                     >Login</button>
                     <section className="paddingTop">
                     <RoundIcon
-                        className="flex-row"
                         family = "fab"
                         name = "facebook-f"
                     />
                      <RoundIcon
-                     className="flex-row"
                         family = "fab"
                         name = "goodreads-g"
                     />

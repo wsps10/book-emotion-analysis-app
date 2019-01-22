@@ -21,7 +21,7 @@ class LoginPage extends React.Component {
         const { handleStateChange, state } = this;
         const { email, password } = state;
         return (
-            <main>
+            <main className="bg vh-100 vw-100">
                 <form className="tc">
                     <h1>Kanoon</h1>
                     <Field 

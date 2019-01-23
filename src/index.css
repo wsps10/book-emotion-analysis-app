@@ -13,10 +13,11 @@ body {
   height: 100vh;
 }
 
-/*Comentei esse trecho porque ainda to testando como alinhar os botões das redes sociais*/
-/*.flex-container {
-  flex-direction: row;
-}*/
+.flexCenterWrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -28,11 +29,11 @@ code {
   size: cover
 }
 div{
-  padding-top: 2cm
+  padding-top: 100px
 }
 
 .paddingTop{
-  padding-top: 0.5cm;
+  padding-top: 15px;
 }
 
 form{
@@ -40,12 +41,12 @@ form{
   width: 300px;
   margin: 0 auto;
   background-color: white;
-  padding-bottom: 0.5cm
+  padding-bottom: 15px
 }
 
 .boxmodel{
   display: inline;
-  margin: 0.25cm
+  margin: 10px
 }
 
 input{
@@ -65,14 +66,14 @@ input{
 }
 
 .marginInput{
-  padding: 0.12cm;
-  width: 6cm
+  padding: 10px;
+  width: 5px
 }
 
 .marginLabel{
-  margin: 0.25cm
+  margin: 5px
 }
 
 .marginLeft{
-  margin-left: 1.2cm
+  margin-left: 1px
 }

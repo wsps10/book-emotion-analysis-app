@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const RoundIcon = ({ bgColor="blue", color="white", family, name }) => {
+const RoundIcon = ({ bgColor="blue", color="white", family, name, title }) => {
 	return (
-		<section className="boxmodel">
-		  <FontAwesomeIcon icon={[family, name]}/>
-		</section>
+		<button type="button" className="boxmodel" data-toggle="tooltip" data-placement="top" title={title}>
+			<FontAwesomeIcon icon={[family, name, title]}/>
+		</button>
 	);
 }
 

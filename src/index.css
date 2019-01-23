@@ -28,16 +28,6 @@ code {
   background: url("img/ArvoreO.png") no-repeat;
   size: cover
 }
-<<<<<<< HEAD
-=======
-div{
-  padding-top: 100px
-}
->>>>>>> 3cf956d3a7bcdcf89809905dba4b271454f7c598
-
-.paddingTop{
-  padding-top: 15px;
-}
 
 form{
   border: 1px solid;
@@ -45,35 +35,6 @@ form{
   margin: 0 auto;
   background-color: white;
   padding-bottom: 15px
-}
-
-input{
-  margin: 1em
-}
-
-.alignLeft{
-  text-align: left
-}
-
-.alignCenter{
-  text-align: center
-}
-
-.alignRight{
-  text-align: right
-}
-
-.marginInput{
-  padding: 10px;
-  width: 5px
-}
-
-.marginLabel{
-  margin: 5px
-}
-
-.marginLeft{
-  margin-left: 1px
 }
 
 .top-50 {

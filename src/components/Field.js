@@ -17,16 +17,17 @@ class Field extends React.Component {
 
 	render() {
 		const { onChangeHandler, props, state } = this;
-		const { id, label, onChange, type } = props;
+		const { id, label, placeholder, onChange, type } = props;
 		const { value } = state;
 
 		return (
-			<section>
+			<section className="ma3 tl">
 				<label htmlFor={id}>{label}</label><br/>
-				<input className="br4"
+				<input className="bn bb-ns h2 mt1 outline-0 w-100-ns"
 					id = {id}
-					type = {type}
 					onChange = {onChangeHandler(onChange)}
+					type = {type}
+					placeholder = {placeholder}
 					value = {value}
 				/>
 			</section>

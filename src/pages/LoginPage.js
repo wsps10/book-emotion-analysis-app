@@ -22,13 +22,14 @@ class LoginPage extends React.Component {
         const { email, password } = state;
         return (
             <main className="bg vh-100 vw-100">
-                <form className="tc">
+                <form className="pa3 tc">
                     <h1>Kanoon</h1>
                     <Field 
                         value = { email }
                         type = "email"
                         label = "Email: "
                         id = "email"
+                        placeholder = "my@mail.me"
                         onChange = { e => {
                             const { value } = e.target;
                             handleStateChange("email", value);
@@ -47,6 +48,7 @@ class LoginPage extends React.Component {
                     />
                     <button
                         type = "button"
+                        className = "bn"
                         onClick = { () => {
                                 axios.get(`https://api-analise-sentimento.mybluemix.net/login/?email=${email}&senha=${password}`)
                                 .then(response => response.data)
@@ -54,7 +56,7 @@ class LoginPage extends React.Component {
                             }
                         }
                     >Login</button>
-                    <section className="flex justify-around pa4">
+                    <section className="flex justify-around">
                         <RoundIcon
                             family = "fab"
                             name = "facebook-f"

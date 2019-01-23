@@ -60,6 +60,7 @@ class LoginPage extends React.Component {
                             name = "facebook-f"
                             title = "Facebook"
                             bgColor = "bg-facebook"
+                            onClick = {() => console.log("facebook")}
                         />
                          <RoundIcon
                             family = "fab"

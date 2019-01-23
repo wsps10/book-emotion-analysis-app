@@ -8,6 +8,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.size{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*Comentei esse trecho porque ainda to testando como alinhar os botões das redes sociais*/
+/*.flex-container {
+  flex-direction: row;
+}*/
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -18,12 +28,21 @@ code {
   size: cover
 }
 
+.paddingTop{
+  padding-top: 0.5cm;
+}
+
 form{
   border: 1px solid;
   width: 300px;
   margin: 0 auto;
   background-color: white;
   padding-bottom: 0.5cm
+}
+
+.boxmodel{
+  display: inline;
+  margin: 0.25cm
 }
 
 input{

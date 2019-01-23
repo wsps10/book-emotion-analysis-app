@@ -7,13 +7,13 @@
 }
 
 .bg-facebook {
-	background-color: var(--color-facebook-standard);
+	background-color: var(--color-facebook);
 }
 .bg-goodreads {
-	background-color: var(--color-goodreads-standard);
+	background-color: var(--color-goodreads);
 }
 .bg-twitter {
-	background-color: var(--color-twitter-standard);
+	background-color: var(--color-twitter);
 }
 .bg-purple-to-blue {
 	background-image: linear-gradient(to right, var(--color-purple-6), var(--color-blue-8));

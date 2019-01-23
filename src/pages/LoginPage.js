@@ -59,20 +59,20 @@ class LoginPage extends React.Component {
                             family = "fab"
                             name = "facebook-f"
                             title = "Facebook"
-                            bgColor = "bg-facebook"
+                            classes = "bg-facebook"
                             onClick = {() => console.log("facebook")}
                         />
                          <RoundIcon
                             family = "fab"
                             name = "goodreads-g"
                             title = "Goodreads"
-                            bgColor = "bg-goodreads"
+                            classes = "bg-goodreads"
                         />
                          <RoundIcon
                             family = "fab"
                             name = "twitter"
                             title = "Twitter"
-                            bgColor = "bg-twitter"
+                            classes = "bg-twitter"
                         />
                     </section>
                 </form>

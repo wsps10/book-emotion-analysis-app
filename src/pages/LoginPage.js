@@ -22,7 +22,7 @@ class LoginPage extends React.Component {
         const { email, password } = state;
         return (
             <main className="bg vh-100 vw-100">
-                <form className="pa3 tc">
+                <form className="ba bg-white pa3 tc w-300">
                     <h1>Kanoon</h1>
                     <Field 
                         value = { email }
@@ -48,15 +48,15 @@ class LoginPage extends React.Component {
                     />
                     <button
                         type = "button"
-                        className = "bn"
+                        className = "bg-purple-to-blue bn br4 dim f4 fw4 h2 link w-90-ns white-90"
                         onClick = { () => {
                                 axios.get(`https://api-analise-sentimento.mybluemix.net/login/?email=${email}&senha=${password}`)
                                 .then(response => response.data)
                                 .then(data => console.log(data));
                             }
                         }
-                    >Login</button>
-                    <section className="flex justify-around">
+                    >login</button>
+                    <section>
                         <RoundIcon
                             family = "fab"
                             name = "facebook-f"

@@ -1,7 +1,9 @@
 :root {
-	--color-facebook-standard: hsl(221, 44%, 41%);
-	--color-goodreads-standard: hsl(40, 83%, 18%);
-	--color-twitter-standard: hsl(203, 89%, 53%);
+	--color-facebook: hsl(221, 44%, 41%);
+	--color-goodreads: hsl(40, 83%, 18%);
+	--color-twitter: hsl(203, 89%, 53%);
+	--color-purple-6: hsl(280, 100%, 30%);
+	--color-blue-8: hsl(231, 73%, 25%);
 }
 
 .bg-facebook {
@@ -12,4 +14,7 @@
 }
 .bg-twitter {
 	background-color: var(--color-twitter-standard);
+}
+.bg-purple-to-blue {
+	background-image: linear-gradient(to right, var(--color-purple-6), var(--color-blue-8));
 }

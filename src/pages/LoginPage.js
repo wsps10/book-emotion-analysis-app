@@ -54,7 +54,7 @@ class LoginPage extends React.Component {
                             }
                         }
                     >Login</button>
-                    <section className="flex justify-center">
+                    <section className="flex justify-around pa4">
                         <RoundIcon
                             family = "fab"
                             name = "facebook-f"

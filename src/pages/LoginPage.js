@@ -21,11 +21,7 @@ class LoginPage extends React.Component {
         const { handleStateChange, state } = this;
         const { email, password } = state;
         return (
-<<<<<<< HEAD
             <main className="bg vh-100 vw-100">
-=======
-            <main className="bg size">
->>>>>>> a59ebd89a50d000f3c34870e25dc1738eac388bd
                 <form className="tc">
                     <h1>Kanoon</h1>
                     <Field 
@@ -58,19 +54,25 @@ class LoginPage extends React.Component {
                             }
                         }
                     >Login</button>
-                    <section className="paddingTop">
-                    <RoundIcon
-                        family = "fab"
-                        name = "facebook-f"
-                    />
-                     <RoundIcon
-                        family = "fab"
-                        name = "goodreads-g"
-                    />
-                     <RoundIcon
-                        family = "fab"
-                        name = "twitter"
-                    />
+                    <section className="flex justify-center">
+                        <RoundIcon
+                            family = "fab"
+                            name = "facebook-f"
+                            title = "Facebook"
+                            bgColor = "bg-facebook"
+                        />
+                         <RoundIcon
+                            family = "fab"
+                            name = "goodreads-g"
+                            title = "Goodreads"
+                            bgColor = "bg-goodreads"
+                        />
+                         <RoundIcon
+                            family = "fab"
+                            name = "twitter"
+                            title = "Twitter"
+                            bgColor = "bg-twitter"
+                        />
                     </section>
                 </form>
             </main>

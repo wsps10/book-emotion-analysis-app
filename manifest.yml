@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 applications:
 
 - name: node-hello-world
  
   memory: 64M
   
+=======
+applications:
+
+- name: node-hello-world
+ 
+  memory: 64M
+  
+>>>>>>> 3cf956d3a7bcdcf89809905dba4b271454f7c598
   buildpack: sdk-for-nodejs

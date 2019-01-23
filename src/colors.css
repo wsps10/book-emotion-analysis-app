@@ -1,0 +1,15 @@
+:root {
+	--color-facebook-standard: hsl(221, 44%, 41%);
+	--color-goodreads-standard: hsl(40, 83%, 18%);
+	--color-twitter-standard: hsl(203, 89%, 53%);
+}
+
+.bg-facebook {
+	background-color: var(--color-facebook-standard);
+}
+.bg-goodreads {
+	background-color: var(--color-goodreads-standard);
+}
+.bg-twitter {
+	background-color: var(--color-twitter-standard);
+}

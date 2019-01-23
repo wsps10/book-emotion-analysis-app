@@ -13,10 +13,11 @@ body {
   height: 100vh;
 }
 
-/*Comentei esse trecho porque ainda to testando como alinhar os botões das redes sociais*/
-/*.flex-container {
-  flex-direction: row;
-}*/
+.flexCenterWrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -27,9 +28,15 @@ code {
   background: url("img/ArvoreO.png") no-repeat;
   size: cover
 }
+<<<<<<< HEAD
+=======
+div{
+  padding-top: 100px
+}
+>>>>>>> 3cf956d3a7bcdcf89809905dba4b271454f7c598
 
 .paddingTop{
-  padding-top: 0.5cm;
+  padding-top: 15px;
 }
 
 form{
@@ -37,12 +44,7 @@ form{
   width: 300px;
   margin: 0 auto;
   background-color: white;
-  padding-bottom: 0.5cm
-}
-
-.boxmodel{
-  display: inline;
-  margin: 0.25cm
+  padding-bottom: 15px
 }
 
 input{
@@ -62,14 +64,24 @@ input{
 }
 
 .marginInput{
-  padding: 0.12cm;
-  width: 6cm
+  padding: 10px;
+  width: 5px
 }
 
 .marginLabel{
-  margin: 0.25cm
+  margin: 5px
 }
 
 .marginLeft{
-  margin-left: 1.2cm
+  margin-left: 1px
+}
+
+.top-50 {
+  top: 50%;
+}
+.left-50 {
+  left: 50%;
+}
+.dynamic-center {
+  transform: translate(-50%, -50%);
 }

@@ -1,11 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const RoundIcon = ({ bgColor="blue", color="white", family, name }) => {
+const wrappedStyle = "absolute db dynamic-center left-50 top-50 f3";
+const wrapperStyle = "br-100 bw0 di dib dim f6 h3 link ma1 relative ph3 pv2 w3";
+
+const RoundIcon = ({ bgColor="bg-dark-blue", color="white-90", family, name, title }) => {
 	return (
-		<section className="boxmodel">
-		  <FontAwesomeIcon icon={[family, name]}/>
-		</section>
+		<button type="button" className={`${wrapperStyle} ${bgColor} ${color}`} title={title}>
+			<FontAwesomeIcon icon={[family, name]} className={wrappedStyle}/>
+		</button>
 	);
 }
 

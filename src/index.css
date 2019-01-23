@@ -13,10 +13,11 @@ body {
   height: 100vh;
 }
 
-/*Comentei esse trecho porque ainda to testando como alinhar os botões das redes sociais*/
-/*.flex-container {
-  flex-direction: row;
-}*/
+.flexCenterWrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

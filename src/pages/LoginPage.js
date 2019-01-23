@@ -58,14 +58,17 @@ class LoginPage extends React.Component {
                     <RoundIcon
                         family = "fab"
                         name = "facebook-f"
+                        title = "Facebook"
                     />
                      <RoundIcon
                         family = "fab"
                         name = "goodreads-g"
+                        title = "Goodreads"
                     />
                      <RoundIcon
                         family = "fab"
                         name = "twitter"
+                        title = "Twitter"
                     />
                     </section>
                 </form>

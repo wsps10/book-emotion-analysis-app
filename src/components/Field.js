@@ -21,15 +21,16 @@ class Field extends React.Component {
 		const { value } = state;
 
 		return (
-			<section className="ma3 tl">
-				<label htmlFor={id}>{label}</label><br/>
-				<input className="bn bb-ns h2 mt1 outline-0 w-100-ns"
+			<section className="bg-red-9 f3 ma4 tl">
+				<label htmlFor={id} className="b red">{label}</label><br/>
+				<input className="bg-red-9 bn bb-ns h2 mt1 outline-0 w-100-ns"
 					id = {id}
 					onChange = {onChangeHandler(onChange)}
 					type = {type}
 					placeholder = {placeholder}
 					value = {value}
 				/>
+				<small className="light-red i">erro</small>
 			</section>
 		);
 	}

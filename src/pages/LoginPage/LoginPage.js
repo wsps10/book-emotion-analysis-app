@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-import Field from '../components/Field';
-import Link from '../components/Link';
-import RoundIcon from '../components/RoundIcon';
+import BrandButton from '../../components/custom/BrandButton/BrandButton';
+import Field from '../../components/custom/Field/Field';
+import Icon from '../../components/custom/Icon/Icon';
+import RoundIcon from '../../components/custom/RoundIcon/RoundIcon';
 
 const isEmail = str => {
     const letters = `([a-zA-Z])+`;
@@ -11,7 +12,7 @@ const isEmail = str => {
     const email = new RegExp(`${alphanumericsAndScores}@${letters}\\.${letters}`);
     const b = email.test(str);
 
-    return b 
+    return b
         ? str
         : new Error(`This format is not of a valid e-mail. Please check if it follows this@example.here`);
 }
@@ -38,23 +39,23 @@ class LoginPage extends React.Component {
         super(props);
         this.state = {
             email: "",
-            password: ""
+            emailStatus: "empty",
+            password: "",
+            passwordStatus: "empty"
         };
     }
 
     render() {
         const { handleStateChange, state } = this;
-        const { email, password } = state;
+        const { email, password, passwordCheck } = state;
         return (
-            <main className="vh-100 vw-100">
-                <form className="bg-white pa3 tc w-300">
-                    <h1>Kanoon</h1>
-                    <Field 
-                        value = { email }
-                        type = "email"
-                        label = "e- mail: "
+            <main className="flex flex-column justify-center vh-100">
+                <form className="bg-white h100 pa3 tc w-34">
+                    <h1 className="mt0">sign in</h1>
+                    <Field
+                        hint = "my@mail.me"
                         id = "email"
-                        placeholder = "my@mail.me"
+                        label = "e-mail: "
                         onChange = { e => {
                             const { value } = e.target;
                             handleStateChange("email", value);
@@ -63,46 +64,40 @@ class LoginPage extends React.Component {
                             .then(response => response.data)
                             .then(data => console.log(data));
                         }}
+                        value = { email }
+                        type = "email"
                     />
                     <Field
+                        hint = "must be at least 6 characters long"
+                        id = "password"
+                        label = "password: "
+                        onChange = { e => handleStateChange("password", e.target.value) }
                         value = { password }
                         type = "password"
-                        label = "password: "
-                        id = "password"
-                        onChange = { e => handleStateChange("password", e.target.value) }
                     />
-                    <button
-                        type = "button"
-                        className = "bg-purple-to-blue bn br-pill dim f3 fw4 h3 link w-90-ns white-90"
-                        onClick = { () => {
-                                axios.get(`https://api-analise-sentimento.mybluemix.net/login/?email=${email}&senha=${password}`)
-                                .then(response => response.data)
-                                .then(data => console.log(data));
-                            }
-                        }
-                    >signin</button>
-                    <strong>
-                        {`Already have an account? Click `}<Link text="here" href="#" />
-                        </strong>
-                    <section className="ma4">
+                    <BrandButton>
+                        <Icon family="fas" icon="arrow-circle-right" className="anima-open" /><span>continue</span>
+                    </BrandButton>
+                    <section className="mt3">
+                        <h2 className="ma0 mb1">you can also use Kanoon with:</h2>
                         <RoundIcon
                             family = "fab"
-                            name = "facebook-f"
+                            icon = "facebook-f"
                             title = "Facebook"
-                            classes = "bg-facebook"
+                            className = "bg-facebook"
                             onClick = {() => console.log("facebook")}
                         />
                          <RoundIcon
                             family = "fab"
-                            name = "goodreads-g"
+                            icon = "goodreads-g"
                             title = "Goodreads"
-                            classes = "bg-goodreads"
+                            className = "bg-goodreads"
                         />
                          <RoundIcon
                             family = "fab"
-                            name = "twitter"
+                            icon = "twitter"
                             title = "Twitter"
-                            classes = "bg-twitter"
+                            className = "bg-twitter"
                         />
                     </section>
                 </form>

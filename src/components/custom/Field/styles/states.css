@@ -1,0 +1,19 @@
+.error {
+	background-color: var(--color-red-9);
+}
+.error > input {
+	background-color: var(--color-red-9);
+}
+.error > label {
+	font-weight: bold;
+	color: red;
+}
+.error > .msg {
+	opacity: 1;
+	transition: opacity .3s ease-in;
+}
+
+.msg {
+	color: darkred;
+	opacity: 0;
+}

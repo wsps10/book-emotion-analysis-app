@@ -1,0 +1,26 @@
+.bg{
+  background: url("../../imgs/ArvoreO.png") no-repeat;
+}
+
+.top-50 {
+  top: 50%;
+}
+.left-50 {
+  left: 50%;
+}
+.dynamic-center {
+  transform: translate(-50%, -50%);
+}
+
+* > .anima-open {
+  transform: rotate(0deg);
+  transition: transform .4s ease-in;
+}
+*:hover > .anima-open {
+  transform: rotate(-90deg);
+  transition: transform .3s ease-in;
+}
+*:active > .anima-open {
+  transform: translateY(-0.2em) rotate(-90deg);
+  transition: transform .3s ease-in;
+}

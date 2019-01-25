@@ -52,7 +52,7 @@ class SigninPage extends React.Component {
         const { email, password, passwordCheck } = state;
         return (
             <main className="flex flex-column justify-center vh-100">
-                <form className="bg-white h100 pa3 tc w-34">
+                <form className="bg-white h100 pa3 tc w-30">
                     <h1 className="ma0 mt0 mb1">Welcome to Kanoon!</h1>
                     <small className="mb1">This is a sign in form. Feel free to fill it...</small>
                     <Field
@@ -90,6 +90,7 @@ class SigninPage extends React.Component {
                     <BrandButton>
                         <Icon family="fas" icon="arrow-circle-right" className="anima-open" /><span>continue</span>
                     </BrandButton>
+                    <span>Already have an account? Click <a href="#">here</a></span>
 
                     <section className="mt3">
                         <h2 className="ma0 mb1">you can also use Kanoon with:</h2>

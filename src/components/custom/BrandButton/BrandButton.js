@@ -1,13 +1,15 @@
 import React from 'react';
+import './BrandButton.css';
 
-const BrandButtonStyle = `bg-purple-to-blue bn br-pill f3 fw4 h3 link mb1 o-50 v-mid w-90-ns white-90`;
+const BrandButtonStyle = `bg-purple-to-blue bn br-pill f3 fw4 h3 link mb1 v-mid w-90-ns white-90`;
 
-const BrandButton = ({ children, className, onClick }) => {
+const BrandButton = ({ children, className, enabled, onClick }) => {
 	return (
 		<button
-            type = {`button`}
             className = {`${BrandButtonStyle} ${className}`}
+            disabled = { !enabled }
             onClick = { onClick }
+            type = {`button`}
         >
         	{ children }
         </button>

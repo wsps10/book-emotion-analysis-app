@@ -43,18 +43,28 @@ class SigninPage extends React.Component {
             password: "",
             passwordStatus: "empty",
             passwordCheck: "",
-            passwordCheckStatus: "empty"
+            passwordCheckStatus: "empty",
+            passwordsMatch: false
         };
     }
 
     render() {
         const { handleStateChange, state } = this;
-        const { email, password, passwordCheck } = state;
+        const { 
+            email, 
+            emailStatus, 
+            password, 
+            passwordStatus, 
+            passwordCheck,
+            passwordCheckStatus,
+            passwordsMatch 
+        } = state;
+
         return (
             <main className="flex flex-column justify-center vh-100">
                 <form className="bg-white h100 pa3 tc w-30">
                     <h1 className="ma0 mt0 mb1">Welcome to Kanoon!</h1>
-                    <small className="mb1">This is a sign in form. Feel free to fill it...</small>
+                    <span className="mb1">This is a signin form. Feel free to fill it.</span>
                     <Field
                         hint = "my@mail.me"
                         id = "email"
@@ -79,7 +89,6 @@ class SigninPage extends React.Component {
                         type = "password"
                     />
                     <Field
-                        className = "error"
                         hint = "make sure it matches the password above"
                         id = "passwordCheck"
                         label = "confirm password: "
@@ -87,7 +96,7 @@ class SigninPage extends React.Component {
                         value = { passwordCheck }
                         type = "password"
                     /> 
-                    <BrandButton>
+                    <BrandButton enabled={ emailStatus === "ok" && passwordsMatch === true }>
                         <Icon family="fas" icon="arrow-circle-right" className="anima-open" /><span>continue</span>
                     </BrandButton>
                     <span>Already have an account? Click <a href="#">here</a></span>

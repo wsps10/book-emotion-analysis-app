@@ -1,27 +1,47 @@
 :root {
-	--color-facebook: hsl(221, 44%, 41%);
-	--color-goodreads: hsl(40, 83%, 18%);
-	--color-twitter: hsl(203, 89%, 53%);
+	--facebook: hsl(221, 44%, 41%);
+	--goodreads: hsl(40, 83%, 18%);
+	--twitter: hsl(203, 89%, 53%);
 
-	--color-blue-8: hsl(231, 73%, 30%);
+	--blue-3: hsl(231, 73%, 30%);
 
-	--color-purple-6: hsl(280, 100%, 40%);
+	--green-9: hsl(120, 93%, 95%);
 
-	--color-red-9: hsl(3, 100%, 95%);
+	--purple-6: hsl(280, 100%, 40%);
+
+	--red-9: hsl(3, 100%, 95%);
 }
 
+.bg-purple-to-blue {
+	background-image: linear-gradient(to right, var(--purple-6), var(--blue-3));
+}
+
+.facebook {
+	color: var(--facebook);
+}
+.b--facebook {
+	border-color: var(--facebook);
+}
 .bg-facebook {
-	background-color: var(--color-facebook);
+	background-color: var(--facebook);
+}
+
+.goodreads {
+	color: var(--goodreads);
+}
+.b--goodreads {
+	border-color: var(--goodreads);
 }
 .bg-goodreads {
-	background-color: var(--color-goodreads);
+	background-color: var(--goodreads);
+}
+
+.twitter {
+	color: var(--twitter);
+}
+.b--twitter {
+	border-color: var(--twitter);
 }
 .bg-twitter {
-	background-color: var(--color-twitter);
-}
-.bg-purple-to-blue {
-	background-image: linear-gradient(to right, var(--color-purple-6), var(--color-blue-8));
-}
-.bg-red-9 {
-	background-color: var(--color-red-9);
+	background-color: var(--twitter);
 }

@@ -11,9 +11,9 @@ import SigninPage from './pages/SigninPage/SigninPage';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faGoodreadsG, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCheck, faExclamation } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faArrowCircleRight, faFacebookF, faGoodreadsG, faTwitter);
+library.add(faArrowRight, faCheck, faExclamation, faFacebookF, faGoodreadsG, faTwitter);
 
 const App = () => {
 	return (

@@ -1,3 +1,22 @@
+.anima-jump {
+  transform: translateY(0em);
+  transition: transform .3s ease-in;
+}
+.anima-jump:active, 
+.anima-jump:hover {
+  transform: translateY(-0.2em);
+  transition: transform .3s ease-in;
+}
+
+.anima-open:disabled {
+  transform: rotate(0deg);
+  transition: transform .4s ease-in;
+}
+.anima-open:enabled {
+  transform: rotate(-90deg);
+  transition: transform .3s ease-in;
+}
+
 .bg{
   background: url("../../imgs/ArvoreO.png") no-repeat;
 }
@@ -11,16 +30,6 @@
 .dynamic-center {
   transform: translate(-50%, -50%);
 }
-
-* > .anima-open {
-  transform: rotate(0deg);
-  transition: transform .4s ease-in;
-}
-*:hover > .anima-open {
-  transform: rotate(-90deg);
-  transition: transform .3s ease-in;
-}
-*:active > .anima-open {
-  transform: translateY(-0.2em) rotate(-90deg);
-  transition: transform .3s ease-in;
+.scale--75 {
+  transform: scale(0.75);
 }

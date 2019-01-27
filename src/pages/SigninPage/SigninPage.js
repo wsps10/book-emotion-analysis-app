@@ -46,19 +46,12 @@ class SigninPage extends React.Component {
     };
 
     handlePasswordCheckChange = passwordCheck => {
-        const { isPasswordValid, state } = this;
-        const passwordCheckIsValid = isPasswordValid(passwordCheck);
-        const passwordsMatch = passwordCheck === state.password;
+        const passwordsMatch = passwordCheck === this.state.password;
 
         this.setState({
             passwordCheck,
-            passwordCheckIsValid,
             passwordsMatch,
-            passwordCheckMessage: passwordsMatch 
-                ? "" 
-                : passwordCheckIsValid
-                    ? "passwords don't match"
-                    : "2short",
+            passwordCheckMessage: passwordsMatch ? "" : "passwords don't match",
             passwordCheckStyle: passwordCheck === ""
                 ? ""
                 : passwordsMatch 
@@ -80,7 +73,6 @@ class SigninPage extends React.Component {
             passwordMessage: "",
             passwordStyle: "",
             passwordCheck: "",
-            passwordCheckIsValid: false,
             passwordCheckMessage: "",
             passwordCheckStyle: "",
             passwordsMatch: false
@@ -104,7 +96,6 @@ class SigninPage extends React.Component {
             passwordMessage,
             passwordStyle,
             passwordCheck,
-            passwordCheckIsValid,
             passwordCheckMessage,
             passwordCheckStyle,
             passwordsMatch,

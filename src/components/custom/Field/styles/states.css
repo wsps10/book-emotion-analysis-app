@@ -21,9 +21,6 @@
 	opacity: 0;
 }
 
-.ok {
-	background-color: var(--green-9);
-}
 .ok .icon--ok {
 	display: inline;
 }

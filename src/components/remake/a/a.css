@@ -1,0 +1,28 @@
+/********* .b *********/
+a {
+	font-weight: bold;
+}
+
+/********* .no-underline *********/
+a {
+	text-decoration: none;
+}
+
+/********* .orange *********/
+a {
+	color: orange;
+}
+
+.underline-to-background--purple {
+	background: linear-gradient(to bottom, var(--purple-6) 0%, var(--purple-6) 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 0.2em 0.2em;
+
+	transition-property: background-size, color;
+	transition: 1s;
+}
+.underline-to-background--purple:hover {
+	background-size: 0.2em 100%;
+	transition: background-size .9s;
+}

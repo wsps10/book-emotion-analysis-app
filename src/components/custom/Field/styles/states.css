@@ -1,0 +1,29 @@
+.error {
+	background-color: var(--red-9);
+}
+.error label {
+	color: red;
+}
+.error .icon--error {
+	display: inline;
+}
+.error .msg {
+	opacity: 1;
+	transition: opacity .3s ease-in;
+}
+
+.icon--error,
+.icon--ok {
+	display: none;
+}
+.msg {
+	color: darkred;
+	opacity: 0;
+}
+
+.ok {
+	background-color: var(--green-9);
+}
+.ok .icon--ok {
+	display: inline;
+}

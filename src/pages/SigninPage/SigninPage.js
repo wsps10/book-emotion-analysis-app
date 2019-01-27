@@ -114,10 +114,12 @@ class SigninPage extends React.Component {
         return (
             <main className="flex flex-column justify-center vh-100">
                 <form className="bg-white h100 pa3 tc w-30">
-                    <BrandButton enabled={true}><h1 className="ma0 mt0 mb1">Welcome to Kanoon!</h1></BrandButton><br/>
-                    <span className="mb1">This is a signin form. Feel free to fill it.</span>
+                    <span>
+                        <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
+                        Welcome to Kanoon, please feel free to sign up
+                    </span><br/>
                     <Field
-                        className={emailStyle}
+                        className={`mt4 ${emailStyle}`}
                         error={emailMessage}
                         hint="my@mail.me"
                         id="email"

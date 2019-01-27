@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+ 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .font-major-mono {

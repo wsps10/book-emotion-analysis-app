@@ -148,7 +148,7 @@ class SigninPage extends React.Component {
                         value={passwordCheck}
                         type="password"
                     />
-                    <section className="flex justify-center items-center"> 
+                    <section className="flex justify-center items-center mb2"> 
                         <RoundIcon
                             classButton="anima-open bg-purple-to-blue"
                             enabled={emailIsValid && passwordIsValid && passwordsMatch}

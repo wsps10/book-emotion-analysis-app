@@ -5,7 +5,7 @@ import Field from '../../components/custom/Field/Field';
 import Icon from '../../components/custom/Icon/Icon';
 import RoundIcon from '../../components/custom/RoundIcon/RoundIcon';
 
-class SigninPage extends React.Component {   
+class Access extends React.Component {   
     isPasswordValid = password => password.length >= 6;
     isEmailValid = email => /^[a-z](\w|\.|-)*@[a-z]+(\.[a-z]+)+$/.test(email.toLowerCase());
     isEmailNew = email => {
@@ -15,6 +15,30 @@ class SigninPage extends React.Component {
         .then(data => b = data === "Success");
 
         return b;
+    };
+    accessWithLogin = () => console.log("accessWithLogin");
+    accessWithSignUp = () => console.log("accessWithSignUp");
+    togglePage = () => {
+        const { accessWithLogin, accessWithSignUp } = this;
+        const { classList } = document.querySelector("#passwordCheckField");
+        const isDisplayed = !classList.contains("dn");
+        const action = isDisplayed ? "add" : "remove";
+        const accessCallback = isDisplayed ? accessWithLogin : accessWithSignUp;
+        const passwordCheck = isDisplayed ? undefined : "";
+        const passwordCheckMessage = isDisplayed ? undefined : "";
+        const passwordsMatch = isDisplayed ? undefined : false;
+        const toggleMessage = isDisplayed 
+            ? "Do not have an account" 
+            : "Already have an account";
+
+        classList[action]("dn");
+        this.setState({
+            accessCallback,
+            passwordCheck,
+            passwordCheckMessage,
+            passwordsMatch,
+            toggleMessage
+        })
     };
 
     handleEmailChange = email => {
@@ -64,6 +88,7 @@ class SigninPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            accessCallback: this.accessWithSignUp,
             email: "",
             emailIsValid: false,
             emailMessage: "",
@@ -75,7 +100,8 @@ class SigninPage extends React.Component {
             passwordCheck: "",
             passwordCheckMessage: "",
             passwordCheckStyle: "",
-            passwordsMatch: false
+            passwordsMatch: false,
+            toggleMessage: "Already have an account"
         };
     }
 
@@ -84,9 +110,11 @@ class SigninPage extends React.Component {
             handleEmailChange, 
             handlePasswordChange,
             handlePasswordCheckChange,
-            state 
+            state,
+            togglePage
         } = this;
         const { 
+            accessCallback,
             email,
             emailIsValid,
             emailMessage,
@@ -99,6 +127,7 @@ class SigninPage extends React.Component {
             passwordCheckMessage,
             passwordCheckStyle,
             passwordsMatch,
+            toggleMessage
         } = state;
 
         return (
@@ -141,9 +170,10 @@ class SigninPage extends React.Component {
                     <section className="flex justify-center items-center mb2"> 
                         <RoundIcon
                             classButton="anima-open bg-purple-to-blue"
-                            enabled={emailIsValid && passwordIsValid && passwordsMatch}
+                            enabled={emailIsValid && passwordIsValid && passwordsMatch !== false}
                             family="fas"
                             icon="arrow-right"
+                            onClick={accessCallback}
                             title="Sign in"
                         />
                         <section className="tc">
@@ -174,11 +204,12 @@ class SigninPage extends React.Component {
                             </span>
                         </section>
                     </section>
-                    <span>Already have an account? Click <a href="#">here</a></span>
+                    <span>{toggleMessage}? Click <strong className="orange pointer" onClick={togglePage}>here</strong>
+                    </span>
                 </form>
             </main>
         );
     }
 }
 
-export default SigninPage;
+export default Access;

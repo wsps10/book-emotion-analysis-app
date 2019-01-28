@@ -146,7 +146,7 @@ class SignUp extends React.Component {
                             classButton="anima-open bg-purple-to-blue"
                             enabled={emailIsValid && passwordIsValid && passwordsMatch !== false}
                             family="fas"
-                            icon="arrow-right"
+                            icon="arrow-up"
                             onClick={() => console.log("SignUp")}
                             title="Sign in"
                         />

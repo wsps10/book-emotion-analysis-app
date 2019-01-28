@@ -1,8 +1,8 @@
 .error {
-	background-color: var(--red-9);
+	background-color: var(--color-red-90);
 }
 .error label {
-	color: red;
+	color: var(--color-red);
 }
 .error .icon--error {
 	display: inline;
@@ -17,7 +17,7 @@
 	display: none;
 }
 .msg {
-	color: darkred;
+	color: var(--color-red-30);
 	opacity: 0;
 }
 

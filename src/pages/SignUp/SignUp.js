@@ -105,8 +105,8 @@ class SignUp extends React.Component {
         } = state;
 
         return (
-            <main className="bg-near-white flex flex-column justify-center vh-100">
-                <form className="h100 pa3 tc w-30">
+            <main className="bg-gray-90 flex justify-between items-center vh-100">
+                <form className="black h100 ml4 pa3 tc w-30">
                     <span>
                         <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
                         Welcome to Kanoon, please feel free to sign up
@@ -144,6 +144,7 @@ class SignUp extends React.Component {
                     <section className="flex justify-center items-center mb2"> 
                         <RoundIcon
                             classButton="anima-open bg-purple-to-blue"
+                            classIcon="gray-90"
                             enabled={emailIsValid && passwordIsValid && passwordsMatch !== false}
                             family="fas"
                             icon="arrow-up"
@@ -180,6 +181,10 @@ class SignUp extends React.Component {
                     </section>
                     <span>Already have an account? Click <a href="#">here</a></span>
                 </form>
+                <div 
+                    title="Reader #19, Darren Thompson (2012)"
+                    className="bg h-100" 
+                    style={{width: "34.5%"}}/>
             </main>
         );
     }

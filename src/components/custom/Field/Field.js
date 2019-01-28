@@ -10,7 +10,7 @@ const Field = ({ className, error, hint, id, label, onChange, value, type }) => 
 		<section className={`f4 flex flex-column pa1 tl ${className}`}>
 			<span className="flex justify-between">
 				<label htmlFor={id} className="b mb1">{label}</label>
-				<Icon family="fas" icon="check" className="green icon--ok" />
+				<Icon family="fas" icon="check" className="green-20 icon--ok" />
 				<Icon family="fas" icon="exclamation" className="red icon--error" />
 			</span>
 			<input id={id} className="bb-ns bg-transparent bn h2 mt2 outline-0 anima-transp-placeholder w-100-ns"
@@ -20,7 +20,7 @@ const Field = ({ className, error, hint, id, label, onChange, value, type }) => 
 				placeholder={hint}
 				value={value}
 			/>
-			<small className="f6 anima-floating-hint gray i">{hint}</small>
+			<small className="f6 anima-floating-hint gray-30 i">{hint}</small>
 			<span className="min-h-small mt-1-n z-1">
 				<small className="i msg">{error}</small>
 			</span>

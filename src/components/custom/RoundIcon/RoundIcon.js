@@ -23,7 +23,7 @@ const RoundIcon = ({
 			<Icon 
 				family={family} 
 				icon={icon}  
-				className={`absolute dynamic-center f3 left-50 top-50 white-90 ${classIcon}`}
+				className={`absolute dynamic-center f3 left-50 top-50 ${classIcon}`}
 			/>
 			</button>
 		</article>

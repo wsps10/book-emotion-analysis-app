@@ -84,11 +84,9 @@ class SignUp extends React.Component {
             handleEmailChange, 
             handlePasswordChange,
             handlePasswordCheckChange,
-            state,
-            togglePage
+            state
         } = this;
-        const { 
-            accessCallback,
+        const {
             email,
             emailIsValid,
             emailMessage,
@@ -100,8 +98,7 @@ class SignUp extends React.Component {
             passwordCheck,
             passwordCheckMessage,
             passwordCheckStyle,
-            passwordsMatch,
-            toggleMessage
+            passwordsMatch
         } = state;
 
         return (

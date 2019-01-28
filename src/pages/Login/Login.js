@@ -5,7 +5,7 @@ import Field from '../../components/custom/Field/Field';
 import Icon from '../../components/custom/Icon/Icon';
 import RoundIcon from '../../components/custom/RoundIcon/RoundIcon';
 
-class SignUp extends React.Component {   
+class Login extends React.Component {   
     isPasswordValid = password => password.length >= 6;
     isEmailValid = email => /^[a-z](\w|\.|-)*@[a-z]+(\.[a-z]+)+$/.test(email.toLowerCase());
     isEmailNew = email => {
@@ -45,22 +45,6 @@ class SignUp extends React.Component {
         });
     };
 
-    handlePasswordCheckChange = passwordCheck => {
-        const passwordsMatch = passwordCheck === this.state.password;
-
-        this.setState({
-            passwordCheck,
-            passwordsMatch,
-            passwordCheckMessage: passwordsMatch ? "" : "passwords don't match",
-            passwordCheckStyle: passwordCheck === ""
-                ? ""
-                : passwordsMatch 
-                    ? "ok" 
-                    : "error" 
-        });
-    };
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -71,11 +55,7 @@ class SignUp extends React.Component {
             password: "",
             passwordIsValid: false,
             passwordMessage: "",
-            passwordStyle: "",
-            passwordCheck: "",
-            passwordCheckMessage: "",
-            passwordCheckStyle: "",
-            passwordsMatch: false
+            passwordStyle: ""
         };
     }
 
@@ -83,9 +63,7 @@ class SignUp extends React.Component {
         const { 
             handleEmailChange, 
             handlePasswordChange,
-            handlePasswordCheckChange,
-            state,
-            togglePage
+            state
         } = this;
         const { 
             accessCallback,
@@ -96,20 +74,15 @@ class SignUp extends React.Component {
             password,
             passwordIsValid,
             passwordMessage,
-            passwordStyle,
-            passwordCheck,
-            passwordCheckMessage,
-            passwordCheckStyle,
-            passwordsMatch,
-            toggleMessage
+            passwordStyle
         } = state;
 
         return (
-            <main className="bg-near-white flex flex-column justify-center vh-100">
-                <form className="h100 pa3 tc w-30">
+            <main className="bg-gray-90 flex justify-between items-center vh-100">
+                <form className="black h100 ml4 pa3 tc w-30">
                     <span>
                         <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
-                        Welcome to Kanoon, please feel free to sign up
+                        Welcome back! We're happy to see you again
                     </span><br/>
                     <Field
                         className={`mt4 ${emailStyle}`}
@@ -131,22 +104,13 @@ class SignUp extends React.Component {
                         value={password}
                         type="password"
                     />
-                    <Field
-                        className={passwordCheckStyle}
-                        error={passwordCheckMessage}
-                        hint="make sure it matches the password above"
-                        id="passwordCheck"
-                        label="confirm password: "
-                        onChange={e => handlePasswordCheckChange(e.target.value)}
-                        value={passwordCheck}
-                        type="password"
-                    />
                     <section className="flex justify-center items-center mb2"> 
                         <RoundIcon
                             classButton="anima-open bg-purple-to-blue"
-                            enabled={emailIsValid && passwordIsValid && passwordsMatch !== false}
+                            classIcon="gray-90"
+                            enabled={emailIsValid && passwordIsValid}
                             family="fas"
-                            icon="arrow-right"
+                            icon="arrow-up"
                             onClick={() => console.log("SignUp")}
                             title="Sign in"
                         />
@@ -178,11 +142,15 @@ class SignUp extends React.Component {
                             </span>
                         </section>
                     </section>
-                    <span>Already have an account? Click <a href="#">here</a></span>
+                    <span>Don't have an account? Click <a href="#">here</a></span>
                 </form>
+                <div 
+                    title="Reader #19, Darren Thompson (2012)"
+                    className="bg h-100" 
+                    style={{width: "34.5%"}}/>
             </main>
         );
     }
 }
 
-export default SignUp;
+export default Login;

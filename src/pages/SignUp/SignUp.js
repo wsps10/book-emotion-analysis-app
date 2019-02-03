@@ -36,7 +36,7 @@ class SignUp extends React.Component {
         this.setState({
             password,
             passwordIsValid,
-            passwordMessage: passwordIsValid ? "" : "this password is way too short! >////<",
+            passwordMessage: passwordIsValid ? "" : "this password is way too short!",
             passwordStyle: password === ""
                 ? ""
                 : passwordIsValid 

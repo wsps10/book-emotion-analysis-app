@@ -15,3 +15,11 @@ code {
 .font-major-mono {
 	font-family: 'Major Mono Display', monospace;
 }
+
+.click{
+	cursor: pointer;
+}
+
+.context-menu {
+	cursor: context-menu;
+}

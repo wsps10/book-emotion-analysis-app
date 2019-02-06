@@ -8,19 +8,29 @@ import RoundIcon from '../../components/custom/RoundIcon/RoundIcon';
 class SignUp extends React.Component {   
     isPasswordValid = password => password.length >= 6;
     isEmailValid = email => /^[a-z](\w|\.|-)*@[a-z]+(\.[a-z]+)+$/.test(email.toLowerCase());
-    isEmailNew = email => {
-        let b = false;
+    isEmailNew = (email, state) => {
         axios.get(`https://api-analise-sentimento.mybluemix.net/busca_email/?email=${email}`)
         .then(response => response.data)
-        .then(data => b = data === "Success");
-
-        return b;
+        .then(data => {
+            const emailIsNew = !(data.status === "Success");
+            const emailMessage = emailIsNew ? "" : "uh oh. This e-mail is already registered";
+            const emailStyle = emailIsNew ? "ok" : "error";
+            
+            this.setState({
+                emailIsNew,
+                emailIsValid: state.emailIsValid,
+                emailMessage: state.emailMessage || emailMessage,
+                emailStyle: state.emailStyle === "ok"
+                    ? emailStyle
+                    : state.emailStyle
+            });
+        });
     };
 
     handleEmailChange = email => {
         const emailIsValid = this.isEmailValid(email);
-        this.setState({
-            email,
+        this.setState({ email });
+        this.isEmailNew(email, {
             emailIsValid,
             emailMessage: emailIsValid ? "" : "please doublecheck the exemple above",
             emailStyle: email === ""
@@ -36,7 +46,7 @@ class SignUp extends React.Component {
         this.setState({
             password,
             passwordIsValid,
-            passwordMessage: passwordIsValid ? "" : "this password is way too short! >////<",
+            passwordMessage: passwordIsValid ? "" : "this password is way too short",
             passwordStyle: password === ""
                 ? ""
                 : passwordIsValid 
@@ -65,6 +75,7 @@ class SignUp extends React.Component {
         super(props);
         this.state = {
             email: "",
+            emailIsNew: false,
             emailIsValid: false,
             emailMessage: "",
             emailStyle: "",
@@ -88,6 +99,7 @@ class SignUp extends React.Component {
         } = this;
         const {
             email,
+            emailIsNew,
             emailIsValid,
             emailMessage,
             emailStyle,
@@ -104,7 +116,7 @@ class SignUp extends React.Component {
         return (
             <main className="bg-gray-90 flex justify-between items-center vh-100">
                 <form className="black h100 ml4 pa3 tc w-30">
-                    <span>
+                    <span className="context-menu">
                         <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
                         Welcome to Kanoon, please feel free to sign up
                     </span><br/>
@@ -142,7 +154,7 @@ class SignUp extends React.Component {
                         <RoundIcon
                             classButton="anima-open bg-purple-to-blue"
                             classIcon="gray-90"
-                            enabled={emailIsValid && passwordIsValid && passwordsMatch !== false}
+                            enabled={emailIsValid && emailIsNew && passwordIsValid && passwordsMatch !== false}
                             family="fas"
                             icon="arrow-up"
                             onClick={() => console.log("SignUp")}

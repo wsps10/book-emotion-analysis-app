@@ -17,7 +17,7 @@ library.add(faArrowUp, faCheck, faExclamation, faFacebookF, faGoodreadsG, faTwit
 
 const App = () => {
 	return (
-		<Login />
+		<SignUp />
 	);
 }
 

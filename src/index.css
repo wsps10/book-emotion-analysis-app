@@ -12,10 +12,14 @@ code {
  	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.context-menu {
-	cursor: context-menu;
-}
-
 .font-major-mono {
 	font-family: 'Major Mono Display', monospace;
+}
+
+.click{
+	cursor: pointer;
+}
+
+.context-menu {
+	cursor: context-menu;
 }

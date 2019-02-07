@@ -15,7 +15,7 @@ const RoundIcon = ({
 		<article className={`anima-jump dib ${classWrapper}`}>
 			<button 
 				type="button" 
-				className={`bw0 br-100 h3 outline-0 ph3 pv2 relative w3 ${classButton}` }
+				className={`bw0 br-100 h3 outline-0 ph3 pointer pv2 relative w3 ${classButton}` }
 				onClick={onClick} 
 				title={title}
 				disabled={!enabled}

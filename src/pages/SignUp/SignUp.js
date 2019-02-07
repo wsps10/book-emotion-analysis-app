@@ -104,8 +104,8 @@ class SignUp extends React.Component {
         return (
             <main className="bg-gray-90 flex justify-between items-center vh-100">
                 <form className="black h100 ml4 pa3 tc w-30">
-                    <span>
-                        <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
+                    <span className="context-menu">
+                        <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue context-menu">Kanoon.</h1>
                         Welcome to Kanoon, please feel free to sign up
                     </span><br/>
                     <Field
@@ -149,7 +149,9 @@ class SignUp extends React.Component {
                             title="Sign in"
                         />
                         <section className="tc">
+                            <div className="context-menu">
                             <small>you can also connect with</small>
+                            </div>
                             <span className="flex justify-center scale--75">
                                 <RoundIcon
                                     classButton="b--facebook ba bg-transparent bw1 mr2"
@@ -176,7 +178,9 @@ class SignUp extends React.Component {
                             </span>
                         </section>
                     </section>
+                    <div className="context-menu">
                     <span>Already have an account? Click <a href="#">here</a></span>
+                    </div>                
                 </form>
                 <div 
                     title="Reader #19, Darren Thompson (2012)"

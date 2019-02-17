@@ -13,7 +13,7 @@ const Field = ({ className, error, hint, id, label, onChange, value, type }) => 
 				<Icon family="fas" icon="check" className="green-20 icon--ok" />
 				<Icon family="fas" icon="exclamation" className="red icon--error" />
 			</span>
-			<input id={id} className="bb-ns bg-transparent bn h2 mt2 outline-0 anima-transp-placeholder w-100-ns"
+			<input className="bb-ns bg-transparent bn h2 mt2 outline-0 anima-transp-placeholder w-100-ns"
 				id={id}
 				onChange={onChange}
 				type={type}

@@ -16,17 +16,16 @@ const passwordsReducer = (state=initialState, action) => {
 	const passwordCheck = isChangePassword ? state.passwordCheck : payload;
 	const passwordsMatch = password === passwordCheck;
 
-	if (isChangePassword || isChangePasswordCheck) {
-		const passwordIsValid = password.length >= 6;
-		return {
+	const passwordIsValid = password.length >= 6;
+
+	return !isChangePassword && !isChangePasswordCheck
+		? state
+		: {
 			password,
 			passwordIsValid,
 			passwordCheck,
 			passwordsMatch
 		};
-	} else {
-		return state;
-	}
 };
 
 export default passwordsReducer;

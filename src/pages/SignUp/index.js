@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Field from '../../components/custom/Field';
-import Icon from '../../components/custom/Icon';
 import RoundIcon from '../../components/custom/RoundIcon';
 
 import { updateEmail, updatePassword, updatePasswordCheck } from '../../utils/actions';
@@ -33,13 +32,11 @@ class SignUp extends React.Component {
             passwordIsValid,
             handlePasswordChange,
             passwordCheck,
-            passwordRequestIsPending,
-            passwordRequestIsSuccessful,
             handlePasswordCheckChange,
             passwordsMatch
         } = this.props;
 
-        const emailMessage = emailRequestIsPending || email === "" || emailIsNew && emailIsValid
+        const emailMessage = emailRequestIsPending || email === "" || (emailIsNew && emailIsValid)
             ? ""
             : !emailRequestIsSuccessful
                 ? "uh oh, something has gone wrong. Type again"

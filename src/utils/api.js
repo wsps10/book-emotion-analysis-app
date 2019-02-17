@@ -2,7 +2,19 @@ import { enhanceMethods } from './object';
 
 const addDomain = str => `http://api-analise-sentimento.mybluemix.net/${str}`;
 const endpoints = {
-	booklist: (userId) => `lista_livro_usuario/?id_usuario=${userId}`,
+	addBookToTheBase: (
+		userId,
+		title,
+		author,
+		status
+	) => `/add_livro_base/?id_usuario=${userId}&status=${status}&titulo=${title}&autor=${author}`,
+	addBookToTheBookList: (
+		userId,
+		bookId,
+		plataform,
+		status
+	) => `/add_livro_usuario/?id_usuario=${userId}&id_livro=${bookId}&plataforma=${plataform}&status=${status}`,
+	getUserBooklist: (userId) => `lista_livro_usuario/?id_usuario=${userId}`,
 	login: (email, password) => `login/?email=${email}&senha=${password}`,
 	recommendationById: (userId) => `recomendacao_id_usuario/?id=${userId}`,
 	recommendationByFeeling: (

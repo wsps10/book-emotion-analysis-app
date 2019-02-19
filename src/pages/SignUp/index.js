@@ -5,18 +5,30 @@ import { Link } from 'react-router-dom';
 import Field from '../../components/custom/Field';
 import RoundIcon from '../../components/custom/RoundIcon';
 
-import { updateEmail, updatePassword, updatePasswordCheck } from '../../utils/actions';
+import { 
+    changeEmail, 
+    changePassword, 
+    changePasswordCheck,
+    clickSignUp
+} from '../../utils/actions';
 
-const mapStateToProps = ({emailChange, passwordChange, passwordCheckChange}) => ({
+const mapStateToProps = ({
+    emailChange, 
+    passwordChange, 
+    passwordCheckChange,
+    accessButtonClick
+}) => ({
     ...emailChange,
     ...passwordChange,
-    ...passwordCheckChange
+    ...passwordCheckChange,
+    ...accessButtonClick
 });
 
 const mapDispatchToProps = dispatch => ({
-    handleEmailChange: e => dispatch(updateEmail(e.target.value)),
-    handlePasswordChange: e => dispatch(updatePassword(e.target.value)),
-    handlePasswordCheckChange: e => dispatch(updatePasswordCheck(e.target.value))
+    handleEmailChange: e => dispatch(changeEmail(e.target.value)),
+    handlePasswordChange: e => dispatch(changePassword(e.target.value)),
+    handlePasswordCheckChange: e => dispatch(changePasswordCheck(e.target.value)),
+    handleAccessButtonClick: (user, password) => dispatch(clickSignUp(user, password))
 });
 
 class SignUp extends React.Component {
@@ -32,8 +44,13 @@ class SignUp extends React.Component {
             passwordIsValid,
             handlePasswordChange,
             passwordCheck,
+            passwordsMatch,
             handlePasswordCheckChange,
-            passwordsMatch
+            loginOrSignUpHasFailed,
+            loginOrSignUpHasSucceded,
+            loginOrSignUpRequestHasFailed,
+            loginOrSignUpRequestIsPending,
+            handleAccessButtonClick
         } = this.props;
 
         const emailMessage = emailRequestIsPending || email === "" || (emailIsNew && emailIsValid)
@@ -110,7 +127,7 @@ class SignUp extends React.Component {
                             enabled={emailIsValid && emailIsNew && passwordIsValid && passwordsMatch}
                             family="fas"
                             icon="arrow-up"
-                            onClick={() => console.log("SignUp")}
+                            onClick={() => handleAccessButtonClick(email, password)}
                             title="Sign in"
                         />
                         <section className="tc">

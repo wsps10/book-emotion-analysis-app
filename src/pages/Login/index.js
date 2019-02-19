@@ -5,16 +5,18 @@ import { Link } from 'react-router-dom';
 import Field from '../../components/custom/Field';
 import RoundIcon from '../../components/custom/RoundIcon';
 
-import { updateEmail, updatePassword } from '../../utils/actions';
+import { changeEmail, changePassword, clickLogin } from '../../utils/actions';
 
-const mapStateToProps = ({emailChange, passwordChange }) => ({
+const mapStateToProps = ({emailChange, passwordChange, accessButtonClick }) => ({
     ...emailChange,
-    ...passwordChange
+    ...passwordChange,
+    ...accessButtonClick
 });
 
 const mapDispatchToProps = dispatch => ({
-    handleEmailChange: e => dispatch(updateEmail(e.target.value)),
-    handlePasswordChange: e => dispatch(updatePassword(e.target.value))
+    handleEmailChange: e => dispatch(changeEmail(e.target.value)),
+    handlePasswordChange: e => dispatch(changePassword(e.target.value)),
+    handleAccessButtonClick: (user, password) => dispatch(clickLogin(user, password))
 });
 
 class Login extends React.Component {
@@ -28,7 +30,12 @@ class Login extends React.Component {
             handleEmailChange,
             password,
             passwordIsValid,
-            handlePasswordChange
+            handlePasswordChange,
+            loginOrSignUpHasFailed,
+            loginOrSignUpHasSucceded,
+            loginOrSignUpRequestHasFailed,
+            loginOrSignUpRequestIsPending,
+            handleAccessButtonClick
         } = this.props;
 
         const emailMessage = emailRequestIsPending || email === "" || (!emailIsNew && emailIsValid)
@@ -86,7 +93,7 @@ class Login extends React.Component {
                             enabled={emailIsValid && !emailIsNew && passwordIsValid }
                             family="fas"
                             icon="arrow-up"
-                            onClick={() => console.log("Login")}
+                            onClick={() => handleAccessButtonClick(email, password)}
                             title="Sign in"
                         />
                         <section className="tc">

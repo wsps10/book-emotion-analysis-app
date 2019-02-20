@@ -29,7 +29,10 @@ const createClickAction = (
 			status
 		}
 	}))
-	.catch(err => dispatch({ type: failed }));
+	.catch(error => dispatch({ 
+		type: failed,
+		payload: { error }
+	}));
 };
 
 export const clickLogin = createClickAction(

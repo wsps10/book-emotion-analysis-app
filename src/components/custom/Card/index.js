@@ -4,7 +4,7 @@ const Card = ({
 	author, 
 	cover, 
 	plataforms, 
-	sinopse,
+	synopsis,
 	title,
 	year 
 }) => {

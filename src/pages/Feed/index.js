@@ -5,21 +5,29 @@ import { Link } from 'react-router-dom';
 import data from './data';
 import CardList from '../../components/custom/CardList';
 
-const mapStateToProps = ({ }) => ({
+import { requestRecommendationsById } from '../../utils/actions';
 
+const mapStateToProps = ({ accessButtonClick, emailChange, requestRecommendations }) => ({
+	...emailChange,
+	...accessButtonClick,
+	...requestRecommendations
 });
 
 const mapDispatchToProps = dispatch => ({
-
+	handleFeedLoad: userId => dispatch(requestRecommendationsById(userId))
 });
 
 class Feed extends React.Component {
-	render() {
-		const { userId } = this.prop;
+	componentWillMount() {
+		const { handleFeedLoad, userId } = this.props;
+		handleFeedLoad(userId || "1");
+	}
 
+	render() {
+		const { recommendations } = this.props;
 		return (
 			<main className="bg-gray-90 vh-100">
-
+				<CardList books={recommendations} />
 			</main>
 		);
 	}

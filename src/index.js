@@ -25,7 +25,7 @@ ReactDOM.render(
 	<Provider store={Store}>
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact={true} component={SignUp} />
+				<Route path="/" exact={true} component={Feed} />
 				<Route path="/login" exact={true} component={Login} />
 				<Route path="/home" exact={true} component={Feed} />
 			</Switch>

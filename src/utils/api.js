@@ -16,8 +16,8 @@ const endpoints = {
 	) => `/add_livro_usuario/?id_usuario=${userId}&id_livro=${bookId}&plataforma=${plataform}&status=${status}`,
 	getUserBooklist: (userId) => `lista_livro_usuario/?id_usuario=${userId}`,
 	login: (email, password) => `login/?email=${email}&senha=${password}`,
-	recommendationById: (userId) => `recomendacao_id_usuario/?id=${userId}`,
-	recommendationByFeeling: (
+	recommendationsById: (userId) => `recomendacao_id_usuario/?id=${userId}`,
+	recommendationsByFeeling: (
 		feeling,
 		userId,
 		mustHaveSinopsis,

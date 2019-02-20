@@ -5,7 +5,16 @@ import './styles/floating-hint.css';
 import './styles/states.css';
 import './styles/utils.css';
 
-const Field = ({ className, error, hint, id, label, onChange, value, type }) => {
+const Field = ({ 
+	className, 
+	error, 
+	hint, 
+	id, 
+	label, 
+	onChange, 
+	value, 
+	type 
+}) => {
 	return (
 		<section className={`f4 flex flex-column pa1 tl ${className}`}>
 			<span className="flex justify-between">

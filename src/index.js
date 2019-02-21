@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import PrivateRoute from './components/custom/PrivateRoute';
 
 import Feed from './pages/Feed';
 import Login from './pages/Login';
@@ -25,9 +27,9 @@ ReactDOM.render(
 	<Provider store={Store}>
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact={true} component={Feed} />
+				<Route path="/" exact={true} component={SignUp} />
 				<Route path="/login" exact={true} component={Login} />
-				<Route path="/home" exact={true} component={Feed} />
+				<PrivateRoute path="/home" exact={true} component={Feed} />
 			</Switch>
 		</BrowserRouter>
 	</Provider>,

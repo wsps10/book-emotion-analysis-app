@@ -3,22 +3,25 @@ import Card from '../Card';
 
 const CardList = ({ books=[] }) => {
 	return (
-		<div className="flex justify-between">
+		<div className="flex justify-around">
 			{
 				books.map((book, i) => {
 					const {
-						autor: author, 
-						img_capa: cover, 
+						autor: authors, 
+						img_capa: cover,
+						data: date,
 						plataforma: plataforms, 
 						sinopse: synopsis,
-						nome_livro: title,
-						data: date
+						nome_livro: title
 					} = book;
 					return (
 						<Card 
 							key={i}
-							author={author}
+							authors={authors}
 							cover={cover}
+							date={date}
+							plataforms={plataforms}
+							synopsis={synopsis}
 							title={title}
 						/>
 					);

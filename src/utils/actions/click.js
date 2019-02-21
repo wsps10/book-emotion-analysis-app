@@ -21,7 +21,7 @@ const createClickAction = (
 ) => {
 	dispatch({ type: pending });
 
-	api[endpoint](user, password)
+	return api[endpoint](user, password)
 	.then(({email, id, status}) => dispatch({
 		type: success,
 		payload: {

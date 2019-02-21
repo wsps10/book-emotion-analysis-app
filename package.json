@@ -11,7 +11,7 @@
     "axios": "^0.18.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3",
+    "react-scripts": "^2.1.5",
     "tachyons": "^4.11.1"
   },
   "scripts": {
@@ -22,9 +22,9 @@
     "build-prd": "cross-env GENERATE_SOURCEMAP=false react-scripts build"
   },
   "engines": {
-		"node": "10.14.x",
-	  	"npm": "6.4.1"
-	},
+    "node": "10.14.x",
+    "npm": "6.4.1"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -33,5 +33,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  }
 }

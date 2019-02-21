@@ -10,14 +10,14 @@ import {
 const isAny = (val) => (...options) => options.includes(val);
 
 const initialState = {
-	loginOrSignUpHasFailed: false,
-	loginOrSignUpHasSucceded: false,
-	loginOrSignUpRequestHasFailed: false,
-	loginOrSignUpRequestIsPending: false,
+	loginOrSignUpUpHasFailed: false,
+	loginOrSignUpUpHasSucceded: false,
+	loginOrSignUpUpRequestHasFailed: false,
+	loginOrSignUpUpRequestIsPending: false,
 	userId: ""
 };
 
-const loginOrSignUpReducer = (state=initialState, action) => {
+const loginOrSignUpUpReducer = (state=initialState, action) => {
 	const { payload, type } = action;
 	const typeIsAny = isAny(type);
 	const typeIsPending = typeIsAny(CLICK_LOGIN_PENDING, CLICK_SIGNUP_PENDING);
@@ -28,32 +28,32 @@ const loginOrSignUpReducer = (state=initialState, action) => {
 		case typeIsPending:
 			return {
 				...state,
-				loginOrSignUpHasFailed: false,
-				loginOrSignUpHasSucceded: false,
-				loginOrSignUpRequestHasFailed: false,
-				loginOrSignUpRequestIsPending: true,
+				loginOrSignUpUpHasFailed: false,
+				loginOrSignUpUpHasSucceded: false,
+				loginOrSignUpUpRequestHasFailed: false,
+				loginOrSignUpUpRequestIsPending: true,
 				userId: ""
 			};
 		case typeIsSuccess:
 			const { id, status } = payload;
-			const loginOrSignUpHasSucceded = status === "Success";
-			const loginOrSignUpHasFailed = !loginOrSignUpHasSucceded;
+			const loginOrSignUpUpHasSucceded = status === "Success";
+			const loginOrSignUpUpHasFailed = !loginOrSignUpUpHasSucceded;
 
 			return {
 				...state,
-				loginOrSignUpHasFailed,
-				loginOrSignUpHasSucceded,
-				loginOrSignUpRequestHasFailed: false,
-				loginOrSignUpRequestIsPending: false,
+				loginOrSignUpUpHasFailed,
+				loginOrSignUpUpHasSucceded,
+				loginOrSignUpUpRequestHasFailed: false,
+				loginOrSignUpUpRequestIsPending: false,
 				userId: id
 			};
 		case typeIsFailed:
 			return {
 				...state,
-				loginOrSignUpHasFailed: false,
-				loginOrSignUpHasSucceded: false,
-				loginOrSignUpRequestHasFailed: true,
-				loginOrSignUpRequestIsPending: false,
+				loginOrSignUpUpHasFailed: false,
+				loginOrSignUpUpHasSucceded: false,
+				loginOrSignUpUpRequestHasFailed: true,
+				loginOrSignUpUpRequestIsPending: false,
 				userId: ""
 			};
 		default:
@@ -61,4 +61,4 @@ const loginOrSignUpReducer = (state=initialState, action) => {
 	}
 };
 
-export default loginOrSignUpReducer;
+export default loginOrSignUpUpReducer;

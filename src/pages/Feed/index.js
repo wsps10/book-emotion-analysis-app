@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import data from './data';
 import CardList from '../../components/custom/CardList';
 
 import { requestRecommendationsById } from '../../utils/actions';
@@ -20,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
 class Feed extends React.Component {
 	componentWillMount() {
 		const { handleFeedLoad, userId } = this.props;
-		handleFeedLoad(userId || "1");
+		handleFeedLoad(userId);
 	}
 
 	render() {

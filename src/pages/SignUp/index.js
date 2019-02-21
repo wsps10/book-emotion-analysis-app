@@ -127,7 +127,14 @@ class SignUp extends React.Component {
                             enabled={emailIsValid && emailIsNew && passwordIsValid && passwordsMatch}
                             family="fas"
                             icon="arrow-up"
-                            onClick={() => handleAccessButtonClick(email, password)}
+                            onClick={ async () => {
+                                const { payload } = await handleAccessButtonClick(email, password);
+                                const { status } = payload;
+
+                                if (status === "Success") {
+                                    console.log("Login is a Success");
+                                }
+                            }}
                             title="Sign in"
                         />
                         <section className="tc">

@@ -4,7 +4,7 @@ import Store from '../../../utils/stores';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route {...rest} render={props => (
-		Store.getState().access.userId !== ""
+		Store.getState().accessButtonClick.userId !== ""
 			? <Component {...props} />
 			: <Redirect to='/Login' />
 	)} />

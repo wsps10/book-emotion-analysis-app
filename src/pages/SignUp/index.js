@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Field from '../../components/custom/Field';
+import BgImage from '../../components/custom/BgImage';
 import Logon from '../../components/custom/Logon';
 import RoundIcon from '../../components/custom/RoundIcon';
 
@@ -173,11 +174,7 @@ class SignUp extends React.Component {
                         <span>Already have an account? Click <Link to="/login">here</Link></span>
                         </div>                
                     </form>
-                    <div 
-                        title="Reader #19, Darren Thompson (2012)"
-                        className="bg h-100" 
-                        style={{width: "34.5%"}}
-                    />
+                    <BgImage />
                 </main>
             </Logon>
         );

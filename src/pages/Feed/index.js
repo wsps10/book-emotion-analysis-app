@@ -39,20 +39,22 @@ class Feed extends React.Component {
 		return (
 			<App>
 				<div className="flex h-100 items-center">
-					<section className="w-40">
-						<Card
-							authors={authors}
-							cover={cover}
-							date={date}
-							plataforms={plataforms}
-							synopsis={synopsis}
-							title={title}
-						/>
-					</section>
-					<section className="flex flex-column items-center justify-center w-60">
-						<BookCarousel books={data} title="main feeling" />
-						<BookCarousel books={data} title="random books" />
-					</section>
+					<div className="flex items-start w-100">
+						<section className="w-40 pt3">
+							<Card
+								authors={authors}
+								cover={cover}
+								date={date}
+								plataforms={plataforms}
+								synopsis={synopsis}
+								title={title}
+							/>
+						</section>
+						<section className="flex flex-column items-center justify-center w-60">
+							<BookCarousel books={data} title="main feeling" />
+							<BookCarousel books={data} title="random books" />
+						</section>
+					</div>
 				</div>
 			</App>
 		);

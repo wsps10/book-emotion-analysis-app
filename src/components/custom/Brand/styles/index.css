@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto');
+
+.context-menu {
+	cursor: context-menu;
+}
+
+.font-major-mono {
+	font-family: 'Major Mono Display', monospace;
+}
+
+.unselectable {
+	user-select: none;
+}
+
 .purple--first-letter::first-letter {
 	color: var(--color-purple);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import Brand from '../../components/custom/Brand';
 import Field from '../../components/custom/Field';
 import MainWithBG from '../../components/custom/MainWithBG';
 import Logon from '../../components/custom/Logon';
@@ -66,7 +67,7 @@ class Login extends React.Component {
                 <MainWithBG>
                     <form className="black h100 ml4 pa3 tc w-30">
                         <span className="context-menu">
-                            <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
+                            <Brand /><br/>
                             Welcome to Kanoon, please feel free to sign up
                         </span><br/>
                         <Field

@@ -19,9 +19,34 @@ import './utils/styles/utils.css';
 import './components/remake/a/a.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faGoodreadsG, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp, faCheck, faExclamation } from '@fortawesome/free-solid-svg-icons';
+import { 
+	faArrowLeft, 
+	faArrowRight, 
+	faArrowUp,
+	faBars,
+	faBook,
+	faCheck, 
+	faExclamation,
+	faHome,
+	faSearch,
+	faTheaterMasks
+} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faArrowUp, faCheck, faExclamation, faFacebookF, faGoodreadsG, faTwitter);
+library.add(
+	faArrowLeft,
+	faArrowRight,
+	faArrowUp,
+	faBars,
+	faBook,
+	faCheck, 
+	faExclamation, 
+	faFacebookF, 
+	faGoodreadsG,
+	faHome,
+	faSearch,
+	faTheaterMasks,
+	faTwitter
+);
 
 ReactDOM.render(
 	<Provider store={Store}>

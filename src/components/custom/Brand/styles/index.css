@@ -1,0 +1,3 @@
+.purple--first-letter::first-letter {
+	color: var(--color-purple);
+}

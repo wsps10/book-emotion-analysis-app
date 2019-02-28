@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Field from '../../components/custom/Field';
-import BgImage from '../../components/custom/BgImage';
 import Logon from '../../components/custom/Logon';
+import MainWithBG from '../../components/custom/MainWithBG';
 import RoundIcon from '../../components/custom/RoundIcon';
 
 import { 
@@ -48,10 +48,6 @@ class SignUp extends React.Component {
             passwordCheck,
             passwordsMatch,
             handlePasswordCheckChange,
-            loginOrSignUpHasFailed,
-            loginOrSignUpHasSucceded,
-            loginOrSignUpRequestHasFailed,
-            loginOrSignUpRequestIsPending,
             handleAccessButtonClick
         } = this.props;
 
@@ -87,7 +83,7 @@ class SignUp extends React.Component {
 
         return (
             <Logon>
-                <main className="bg-gray-90 flex justify-between items-center vh-100">
+                <MainWithBG>
                     <form className="black h100 ml4 pa3 tc w-30">
                         <span className="context-menu">
                             <h1 className="font-major-mono f1 ma0 mt0 mb1 purple-to-blue">Kanoon.</h1>
@@ -146,22 +142,22 @@ class SignUp extends React.Component {
                                 </div>
                                 <span className="flex justify-center scale--75">
                                     <RoundIcon
-                                        classButton="b--facebook ba bg-transparent bw1 mr2"
+                                        classButton="anima-jump b--facebook ba bg-transparent bw1 mr2"
                                         classIcon="facebook"
                                         family="fab"
                                         icon="facebook-f"
                                         title="Facebook"
                                         onClick={() => console.log("facebook")}
                                     />
-                                     <RoundIcon
-                                        classButton="b--goodreads ba bg-transparent bw1 ml2 mr2"
+                                    <RoundIcon
+                                        classButton="anima-jump b--goodreads ba bg-transparent bw1 ml2 mr2"
                                         classIcon="goodreads"
                                         family="fab"
                                         icon="goodreads-g"
                                         title="Goodreads"
                                     />
                                      <RoundIcon
-                                        classButton="b--twitter ba bg-transparent bw1 ml2"
+                                        classButton="anima-jump b--twitter ba bg-transparent bw1 ml2"
                                         classIcon="twitter"
                                         family="fab"
                                         icon="twitter"
@@ -174,8 +170,7 @@ class SignUp extends React.Component {
                         <span>Already have an account? Click <Link to="/login">here</Link></span>
                         </div>                
                     </form>
-                    <BgImage />
-                </main>
+                </MainWithBG>
             </Logon>
         );
     }

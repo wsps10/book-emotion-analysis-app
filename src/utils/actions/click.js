@@ -1,4 +1,5 @@
 import { 
+	CLICK_BOOK,
 	CLICK_LOGIN_PENDING,
 	CLICK_LOGIN_SUCCESS,
 	CLICK_LOGIN_FAILED,
@@ -35,9 +36,14 @@ const createClickAction = (
 	}));
 };
 
+export const clickBook = payload => ({
+	type: CLICK_BOOK,
+	payload
+});
+
 export const clickLogin = createClickAction(
-	CLICK_LOGIN_PENDING, 
-	CLICK_LOGIN_SUCCESS, 
+	CLICK_LOGIN_PENDING,
+	CLICK_LOGIN_SUCCESS,
 	CLICK_LOGIN_FAILED,
 	"login"
 );

@@ -1,25 +1,20 @@
 import React from 'react';
+import Cover from '../Cover';
 
-const Card = ({ 
-	authors, 
-	cover, 
-	plataforms, 
+const Card = ({	
+	authors,
+	cover,
+	date,
+	plataforms,
 	synopsis,
-	title,
-	date 
-}) => {
-	const author = authors.split(",")[0];
-	const year = date.split("-")[0];
-
-	return (
-		<div className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-			<img alt="cover" src={cover} />
-			<div>
-				<h2 className="f6">{title}</h2>
-				<small>{author}</small>
-			</div>
-		</div>
-	);
-};
+	title
+}) => (
+	<section class="pl3 pr3">
+		<Cover alt={title} src={cover} className="fl mr3" />
+		<h2 className="di f5 fl ma0">{title}</h2><br/>
+		{`by ${authors} in ${date}`}<br/><br/>
+		{synopsis}
+	</section>
+);
 
 export default Card;

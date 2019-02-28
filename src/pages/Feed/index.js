@@ -1,12 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
-import CardList from '../../components/custom/CardList';
+import App from '../../components/custom/App';
+import BookCarousel from '../../components/custom/BookCarousel';
+import Card from '../../components/custom/Card';
 
 import { requestRecommendationsById } from '../../utils/actions';
 
-const mapStateToProps = ({ accessButtonClick, emailChange, requestRecommendations }) => ({
+import data from './data';
+
+const mapStateToProps = ({ accessButtonClick, book, emailChange, requestRecommendations }) => ({
+	...book,
 	...emailChange,
 	...accessButtonClick,
 	...requestRecommendations
@@ -18,16 +22,39 @@ const mapDispatchToProps = dispatch => ({
 
 class Feed extends React.Component {
 	componentWillMount() {
-		const { handleFeedLoad, userId } = this.props;
-		handleFeedLoad(userId);
+		/*const { handleFeedLoad, userId } = this.props;
+		handleFeedLoad(userId);*/
 	}
 
 	render() {
-		const { recommendations } = this.props;
+		const { 
+			recommendations,
+			authors,
+			cover,
+			date,
+			plataforms,
+			synopsis,
+			title
+		} = this.props;
 		return (
-			<main className="bg-gray-90 vh-100">
-				<CardList books={recommendations} />
-			</main>
+			<App>
+				<div className="flex h-100 items-center">
+					<section className="w-40">
+						<Card
+							authors={authors}
+							cover={cover}
+							date={date}
+							plataforms={plataforms}
+							synopsis={synopsis}
+							title={title}
+						/>
+					</section>
+					<section className="flex flex-column items-center justify-center w-60">
+						<BookCarousel books={data} title="main feeling" />
+						<BookCarousel books={data} title="random books" />
+					</section>
+				</div>
+			</App>
 		);
 	}
 }

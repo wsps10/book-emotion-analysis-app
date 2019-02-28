@@ -12,8 +12,9 @@ const Header = ({ className }) => (
 		<header className="flex items-center justify-between pl4 pr4">
 			<span>
 				<IconLink icon="home" text="home" to="home" className="gray mr4" />
-				<IconLink icon="search" text="search" to="search" className="gray mr4" />
+				<IconLink icon="book" text="your library" to="shelf" className="gray mr4" />
 				<IconLink icon="theater-masks" text="pick a feeling" to="pick" className="gray mr4" />
+				<IconLink icon="search" text="search" to="search" className="gray mr4" />
 			</span>
 			<span className="flex items-center">
 				<RoundIcon

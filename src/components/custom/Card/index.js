@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Cover from '../Cover';
+import RoundIcon from '../RoundIcon';
 
 const cutText = (text=``, maxLength=0) => {
 	const words = text.split(` `);
@@ -30,15 +32,47 @@ const Card = ({
 	const release = year === `` ? `` : `in ${year}`;
 	const signature = `${authorship} ${release}`;
 
-	const summary = cutText(synopsis, 1100);
+	const summary = cutText(synopsis, 900);
 
 	return (
-		<section class="pl3 pr3">
-			<Cover alt={title} src={cover} className="fl mr3" />
-			<h2 className="di f5 fl ma0">{title}</h2><br/>
-			{signature}<br/><br/>
-			{summary}
-		</section>
+		<article class="flex flex-column items-center justify-between pl3 pr3">
+			<section>
+				<Cover alt={title} src={cover} className="fl mr3" />
+				<h2 className="di f5 ma0">{title}</h2><br/>
+				{signature}<br/><br/>
+				{summary}
+			</section>
+			<section className="flex">
+				<RoundIcon
+                    classButton="anima-jump bg-transparent bn"
+                    classIcon="green"
+                    family="fas"
+                    icon="thumbs-up"
+                    title="gonna read it now!"
+                />
+                <RoundIcon
+                    classButton="anima-jump bn bg-transparent"
+                    classIcon="red"
+                    family="fas"
+                    icon="thumbs-down"
+                    title="nop"
+                />
+                <RoundIcon
+                    classButton="anima-jump bg-transparent bn"
+                    classIcon="gray"
+                    family="fas"
+                    icon="glasses"
+                    title="already read"
+                />
+                <RoundIcon
+                    classButton="anima-jump bg-transparent bn"
+                    classIcon="twitter"
+                    family="fab"
+                    icon="twitter"
+                    title="lemme tweet about..."
+                />
+			</section>
+		</article>
 	);
 };
 

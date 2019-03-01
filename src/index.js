@@ -27,9 +27,12 @@ import {
 	faBook,
 	faCheck, 
 	faExclamation,
+	faGlasses,
 	faHome,
 	faSearch,
-	faTheaterMasks
+	faTheaterMasks,
+	faThumbsDown,
+	faThumbsUp
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -38,13 +41,16 @@ library.add(
 	faArrowUp,
 	faBars,
 	faBook,
-	faCheck, 
+	faCheck,
 	faExclamation, 
 	faFacebookF, 
+	faGlasses,
 	faGoodreadsG,
 	faHome,
 	faSearch,
 	faTheaterMasks,
+	faThumbsDown,
+	faThumbsUp,
 	faTwitter
 );
 

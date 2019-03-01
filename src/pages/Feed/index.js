@@ -39,8 +39,8 @@ class Feed extends React.Component {
 		return (
 			<App>
 				<div className="flex h-100 items-center">
-					<div className="flex items-start w-100">
-						<section className="w-40 pt3">
+					<div className="flex flex-wrap items-start w-100">
+						<section className="flex-grow-1 pt3 w-40">
 							<Card
 								authors={authors}
 								cover={cover}
@@ -52,7 +52,7 @@ class Feed extends React.Component {
 						</section>
 						<section className="flex flex-column items-center justify-center w-60">
 							<BookCarousel books={data} title="main feeling" />
-							<BookCarousel books={data} title="random books" />
+							<BookCarousel books={data} title="main feeling" />
 						</section>
 					</div>
 				</div>

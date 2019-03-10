@@ -1,6 +1,9 @@
 import React from 'react';
 import Icon from '../Icon';
 
+import './styles/alignment.css';
+import './styles/animation.css';
+
 const RoundIcon = ({ 
 	classButton, 
 	classIcon, 

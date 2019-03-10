@@ -1,17 +1,20 @@
 import { combineReducers } from 'redux';
-import emailReducer from './emailReducer';
+import accessReducer from './accessReducer';
 import bookReducer from './bookReducer';
-import loginAndSignUpReducer from './loginAndSignUpReducer';
+import emailReducer from './emailReducer';
+import feelingReducer from './feelingReducer';
 import passwordsReducer from './passwordsReducer';
 import recommendationsReducer from './recommendationsReducer';
- 
+import twitterReducer from './twitterReducer';
+
 const Reducers = combineReducers({
-	accessButtonClick: loginAndSignUpReducer,
+	access: accessReducer,
 	book: bookReducer,
-	emailChange: emailReducer,
-	passwordChange: passwordsReducer,
-	passwordCheckChange: passwordsReducer,
-	requestRecommendations: recommendationsReducer
+	email: emailReducer,
+	feeling: feelingReducer,
+	password: passwordsReducer,
+	recommendations: recommendationsReducer,
+	twitter: twitterReducer
 });
 
 export default Reducers;

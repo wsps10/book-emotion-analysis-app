@@ -4,6 +4,7 @@ import Book from '../Book';
 import RoundIcon from '../RoundIcon';
 
 const BookCarousel = ({ books=[], title="" }) => {
+	const focusedBooks = books.slice(0, 4);
 	return (
 		<section>
 			<h2 className="ma0 mt2">{title}</h2>
@@ -17,7 +18,7 @@ const BookCarousel = ({ books=[], title="" }) => {
 	            />
 				<div>
 					{
-						books.map((book, key) => {
+						focusedBooks.map((book, key) => {
 							const {
 								autor: thisAuthors, 
 								img_capa: thisCover,
